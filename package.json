@@ -1,7 +1,8 @@
 {
   "name": "spring-workshop",
   "version": "2.0.0",
-  "description": ".net Spring Workshop, presented by Yamaoka-Kitaguchi Lab.",
+  "license": "",
+  "description": ".net Spring Workshop, presented by Yamaoka Lab.",
   "main": "gulpfile.js",
   "repository": {
     "type": "git",
@@ -11,16 +12,21 @@
   "bugs": {
     "url": "https://github.com/yamaoka-kitaguchi-lab/spring-workshop/issues"
   },
+  "scripts": {
+    "build": "gulp build",
+    "dev": "gulp"
+  },
   "homepage": "https://workshop.net.ict.e.titech.ac.jp/",
   "devDependencies": {
-    "del": "^4.0.0",
-    "gulp-cli": "^2.0.1"
+    "del": "^4.1.1",
+    "gulp-cli": "^2.3.0"
   },
   "dependencies": {
-    "browser-sync": "^2.26.7",
+    "browser-sync": "^2.29.0",
     "gulp": "^4.0.2",
-    "gulp-notify": "^3.2.0",
-    "gulp-pug": "^4.0.1",
-    "pug": "^2.0.4"
-  }
+    "gulp-notify": "^4.0.0",
+    "gulp-pug": "^5.0.0",
+    "pug": "^3.0.2"
+  },
+  "packageManager": "yarn@3.4.1"
 }

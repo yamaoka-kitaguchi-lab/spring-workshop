@@ -1,25 +1,23 @@
 .PHONY: default
 default:
-	docker-compose up pug
-	docker-compose up -d web
-	docker-compose logs -f web
+	mkdir -p public/
+	docker compose up pug
+	docker compose up -d web
+	docker compose logs -f web
 
 .PHONY: build
 build:
-	docker-compose up --force-recreate pug
+	docker compose up --force-recreate pug
 
 .PHONY: web
 web:
-	docker-compose up --force-recreate web
-
-.PHONY: watch
-develop:
-	docker-compose up --force-recreate watch web
+	mkdir -p public/
+	docker compose up --force-recreate web
 
 .PHONY: clean
 clean:
-	docker-compose kill
-	docker-compose rm -f
+	docker compose kill
+	docker compose rm -f
 
 .PHONY: remove
 remove: clean
